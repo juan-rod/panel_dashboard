@@ -1,0 +1,120 @@
+.sidebar{
+	background-color: cc(btn, .05);
+	height:100%;
+	a{
+		text-decoration: none;
+		color: cc(txt);
+	}
+	.active{
+		color: cc(card);
+		.sidebar__links--icon{
+			color: cc(card);
+		}
+	}
+	&__logo{
+		display: flex;
+		justify-content: center;
+		align-items:center;
+		height:80px;
+		padding: 0 1.5em;
+		margin-bottom: 2em;
+		h1{
+
+		}
+		img{
+			position: relative;
+			top: 20%;
+		}
+	}
+	&__content{
+		// border:1px solid red;
+		display: flex;
+		flex-direction: column;
+		&--links a{
+			height: 2.5em;
+			// border:1px solid blue;
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			align-items: center;
+			.sidebar__links--icon{
+				flex: 1;
+    		text-align: right;
+    		padding-right: .75em;
+				color: cc(txt,.75)
+			}
+			.sidebar__links--txt{
+				flex:2;
+				p{
+					margin-bottom: 0;
+				}
+			}
+			&:hover{
+				@include hover;
+			}
+		}
+
+	}
+	&__user{
+		.user__content{
+			padding: 1em 0;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			&--initials{
+				@include btnBoxShadow;
+				@include profileInitials;
+
+				span{
+					position: relative;
+					top: calc(50% - 10px);
+				}
+
+				&:hover{
+					background-image: linear-gradient(-90deg,#80D1F3 0%, #4A90E2 100%);
+					transform: translateY(-1px);
+					box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+					transition: all 225ms cb(bounce);
+				}
+			}
+			&--details{
+				padding-top: .5em;
+				p{
+					margin-bottom: .5rem;
+					max-width: 165px;
+				}
+				.user__name{
+					font-weight: bold;
+				}
+				.user__id{
+					font-size: .7em;
+					color: cc(txt, .7);
+				}
+			}
+			&:hover{
+				@include hover;
+			}
+		}
+	}
+	&__pagelinks{
+    display: flex;
+    justify-content: space-evenly;
+		
+		ul{
+			width:100%;
+			li{
+				padding-left: 40%;
+				height:2.5em;
+				align-self: center;
+				p{
+					margin-bottom: 0;
+					line-height: 2.5em;
+				}
+
+				&:hover{
+					@include hover;
+				}
+			}
+		}
+	}
+}

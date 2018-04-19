@@ -1,0 +1,32 @@
+.home{
+	// @include sidebarBoxShadow;
+	border-left: 1px solid cc(border, .75);
+	@include homebackground;
+	height: auto;
+	min-height:100vh;
+	@media only screen and (min-width: 600px) {
+		@include threeRow;
+
+	}
+
+	&__routerview{
+			padding: 1.5rem;
+			@media only screen and (min-width: 600px) {
+			&.content, &.home__view{
+				padding: 1.5rem 0 0 0;
+				grid-column: 2/5;
+				&.rewards{
+					grid-column: 1/-1;
+					padding: 1.5rem 0 0 0;
+				}
+
+				.home__welcome p{
+					font-size: 1.1em;
+				}
+			}
+			// &.content .home__view .rewards{
+			// 	grid-column: 1/-1;
+			// }
+		}
+	}
+}

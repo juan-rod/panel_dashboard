@@ -1,0 +1,69 @@
+//google fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700');
+
+// font stack
+@mixin font-stack($ff, $weight: normal) {
+  font-family: #{$ff}, Helvetica, Arial, sans-serif;
+  font-weight: $weight;
+}
+
+// font families
+%ff--200 { @include font-stack('Montserrat', 200) }
+%ff--400 { @include font-stack('Montserrat', 400) }
+%ff--500 { @include font-stack('Montserrat', 500) }
+%ff--700 { @include font-stack('Montserrat', 700) }
+
+// extend placeholders
+%txt--body {
+  @extend %ff--500;
+  font-size: 1rem;
+}
+%txt--login {
+  @extend %ff--700;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+%txt--header {
+  @extend %ff--700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+%txt--rte {
+  @extend %txt--body;
+  line-height: 1.5;
+}
+
+%txt--banner {
+  @extend %ff--700;
+  line-height: 1;
+  font-size: 2.2rem;
+}
+
+%txt--preview {
+  @extend %ff--500;
+  font-size: 3.6vw;
+  text-transform: capitalize;
+
+  @media (--desktop) {
+    font-size: 3.25rem;
+  }
+}
+
+%txt--title {
+  @extend %ff--200;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+%txt--subtitle {
+  @extend %ff--500;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+%txt--heading {
+  @extend %ff--700;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}

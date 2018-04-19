@@ -1,0 +1,27 @@
+.ms__button--right{
+	text-align: right;
+}
+.ms__button{
+	@include btnCrisp;
+	box-shadow: none;
+	&:focus{
+		outline:none;
+	}
+	&:hover{
+		background-color: cc(btn);
+		color: cc(bg);
+		transform: translateY(-1px);
+		box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+	}
+
+	&.active{
+		background-color: cc(btn);
+		transform: translateY(1px);
+		i {
+			color: cc(bg);
+		}
+	}
+}
+.ms__button--lg{
+	
+}

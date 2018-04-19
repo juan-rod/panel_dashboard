@@ -1,0 +1,77 @@
+.cardTemp {
+	@include cardUI;
+	@include cardShadowMD;
+	&:hover{
+		transform: translateY(-1px);
+		box-shadow: 0 3px 6px 0 rgba(74,144,226,0.20), 0 4px 9px 0 rgba(0,0,0,0.20);
+		transition: all 225ms cb();
+	}
+	&__header{
+		padding:2% 4%;
+		border-bottom: 1px solid cc(card,.3);
+		p{
+			@extend %txt--subtitle;
+			margin-bottom: 0;
+		}
+	}
+	&__body{
+		border-bottom: 1px solid cc(card,.3);
+		padding:2% 4%;
+		p{
+			@extend %txt--rte;
+			// margin-bottom: 0;
+		}
+	}
+	&__footer{
+		padding:2% 4%;
+		min-height:33px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		@include hover;
+		p{
+			color: cc(txt, .75);
+			text-align: right;
+			font-size: .8rem;
+			margin-bottom: 0;
+		}
+	}
+}
+.profile__dropdown{
+	@include popup;
+	width:250px;
+	background: cc(bg);
+	top:65px;
+	right:40px;
+	z-index: 1;
+
+	.cardTemp{
+		margin-bottom: 0;
+		min-height: 0;
+		&__header {
+			text-align: left;
+			span{
+				font-size: .8rem;
+			}
+		}
+		&__body{
+			text-align: left;
+			border-bottom:none;
+			padding: 0;
+			a{
+				text-decoration: none;
+				color: cc(txt);
+			}
+			p{
+				margin-bottom: 0;
+				padding:2% 4%;
+				&:hover{
+					@include hover;
+				}
+			}
+		}
+		&__footer{
+			min-height: 12px;
+		}
+	}
+}

@@ -1,0 +1,177 @@
+.login {
+  @include twoColumn;
+  height:100vh;
+  margin: 0 auto;
+  background-color: cc(btn, .05);
+  a{
+    text-decoration: none;
+    
+    &:hover{
+      color: cc(primary)
+    }
+  }
+  
+  &__aside{
+    @include homebackground;
+    @include btnBoxShadow;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    
+    overflow: hidden;
+    &--body{
+      max-width: 50%;
+      margin-top:100px;
+      margin-bottom: 100px;
+
+      .MsLogo{
+        position: absolute;
+        top: 30px;
+        padding:0;
+      }
+
+    }
+    &--top{
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: $ms-dark-blue;
+      h1{
+        flex: 1 1 auto;
+        margin-bottom:1px;
+      }
+    }
+
+    &--top .rewards{
+      color:$ms-light-blue;
+    }
+
+    &--bottom{
+      @extend %txt--rte;
+      margin-top:1rem;
+    }
+
+  }
+  &__button {
+    margin: 1.5em 0 2em 0;
+  }
+  &__body{
+    position: relative;
+    height: 500px;
+    padding: 1rem;
+
+    // .login__card{
+    //   position: absolute;
+    //   top: -50px;
+    //   left: 10px;
+    //   right: 10px;
+    // }
+  }
+  &__form{
+    padding:0px 1.5rem;
+
+    &--heading{
+      text-align: center;
+      padding: 0 2rem;
+      h2{
+        font-size: 2.2rem;
+        line-height: 1.2;
+      }
+      p{
+        font-size: 1em;
+        line-height: 1.5;
+        color: cc(txt, .75);
+        max-width: 340px;
+      }
+
+    }
+    &--password{
+      .lock-icon{
+        position: absolute;
+          z-index: 2;
+          top: 14px;
+          right: 15px;
+      }
+      .lock-icon i{
+        font-size: 1.5em;
+          color: rgba(76, 78, 77, 0.55);
+      }
+    }
+    &--reset{
+      text-align: right;
+      position: relative;
+      top: -2px;
+      font-size: .8rem;
+      color: cc(txt, .75);
+
+      &:hover{
+        color:cc(primary) !important;
+      }
+    }
+    &--button{
+      background-color:cc(btn);
+      margin-bottom: 5%;
+      height:50px;
+      font-size: 1.5em;
+      line-height:1;
+      font-weight:500;
+      border-radius: 0px;
+    }
+    &--panel{
+      text-align: right;
+      color: cc(txt, .75);
+      span{
+        margin-left:8px;
+        color: cc(btn)
+      }
+      .forgot-password{
+        text-align: right;
+          /*margin-bottom: 5%;*/
+        font-size: 80%;
+        font-weight: 400;
+        position: relative;
+        top: -10px;
+      }
+    }
+  }
+  &__input{
+    margin: 5% 0;
+    input{
+      height: 50px;
+      font-size: 1.5em;
+      font-weight: 400;
+      border-radius: 0px;
+    }
+  }
+  @media only screen and (min-width: 786px) {
+      &__body{
+        position: inherit;
+        height: auto;
+        padding: 6rem 1rem 1rem 1rem;
+        margin: auto;
+        .login__card{
+          position: inherit;
+        }
+      }
+      &__form{
+        padding: 0 8%;
+      }
+      &__aside{
+        padding-bottom: 0;
+        box-shadow:none;
+        &--body{
+          margin-top:0;
+          margin-bottom: 0;
+          // padding: 6% 15%;
+        }
+        &--top{
+          flex-direction: column;
+        }
+      }
+  }
+  @media only screen and (max-width: 786px) {
+    height: 100%;
+  }
+}

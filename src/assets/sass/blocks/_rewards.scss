@@ -1,0 +1,62 @@
+#rewards{
+	@include dataGrid;
+	
+}
+.rewards{
+	&__body {
+		position: relative;
+	}
+	&__card{
+		.cardTemp__header{
+			p{
+				font-weight: 700;
+				font-size:1.15rem;
+			}
+		}
+		&--img{
+			height: 175px;
+    	padding: 0;
+    		img{
+    			background-color:cc(bg);
+					height: 100%;
+		    	width: 100%;
+    		}
+		}
+		&--points{
+			position: absolute;
+			font-size: .8rem;
+			text-align: right;
+			// padding: 2% 0;
+			padding-right:0;
+			color: cc(txt);
+			z-index: 10;
+			p{
+				display:inline-block;
+				padding: 0 .5em;
+				border-radius: 0 1em;
+				background: cc(bg);
+			}
+		}
+		&--body{
+			height:100px;
+			text-align: justify;
+			
+			p{
+				font-size: 1rem;
+				margin-top: .5rem;
+				margin-bottom: .5rem;
+				color: cc(txt, .8);
+			}
+		}
+		&--btn{
+			padding: 0 0;
+			margin-bottom: 1rem;
+    		margin-top: 1rem;
+			button{
+				line-height: 1;
+				padding: .5em 1em;
+			}
+		}
+
+	}
+}

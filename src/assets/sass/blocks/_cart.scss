@@ -1,0 +1,33 @@
+#cart{
+	grid-column: 2/ 5;
+	.cart-table{
+		thead{
+			font-weight: 700;
+		}
+	}
+}
+
+.cartNav{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	a{
+		width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+	.itemsInCart{
+		position: absolute;
+    top: calc(50% - 10px);
+    left: 0;
+		right: 0;
+		bottom: 0;
+    font-size: .8em;
+		color: cc(card);
+		font-weight: 700;
+	}
+}

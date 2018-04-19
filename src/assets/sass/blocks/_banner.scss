@@ -1,0 +1,68 @@
+.banner{
+	// @include bannerBoxShadow;
+	border-bottom: 1px solid cc(border, .75);
+	background-color: cc(bg);
+	width: 100%;
+	height:80px;
+	&__title{
+		display:none;
+		@extend %txt--banner;
+		@media only screen and (min-width: 600px) {
+			display:block;
+			text-transform: capitalize;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			// margin-left: 1em;
+			font-size:1.85em;
+			p{
+				margin-bottom: 0;
+			}
+	
+		}
+	}
+	&__icons{
+		// @include btnBoxShadow;
+		@include profileInitials;
+		
+		&:hover{
+			border: 0px;
+			background-image: linear-gradient(-90deg,#80D1F3 0%, #4A90E2 100%);
+			transform: translateY(-1px);
+			box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+			transition: all 225ms cb(bounce);
+		}
+		&.sm__icon{
+			@include circleIcon;
+		}
+		&.userProfile{
+			margin-left: .6em;
+			span{
+				position: relative;
+				top: calc(50% - 10px);
+			}
+		}
+		
+	}
+	&__profile{
+		padding: 0 5%;
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+		overflow: auto;
+		max-width: 1440px;
+		margin: 0 auto;
+		&--iconsDiv{
+			position: absolute;
+			right: 30px;
+			top: 10px;
+			display: flex;
+			justify-content: baseline;
+				.subIcons{
+					display: flex;
+					flex-direction: row-reverse;
+					justify-content: flex-end;	
+				}
+		}
+	}
+}

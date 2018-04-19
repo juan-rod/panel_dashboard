@@ -1,0 +1,104 @@
+.MsLogo{
+  display: block;
+  position: absolute;
+  z-index: 3;
+  padding-left: 1rem;
+  padding-top: 1rem;
+
+  &__link{
+
+    img{
+      height:40px;
+      width: 200px;
+    }
+  }
+  @media only screen and (max-width: 786px) {
+    padding: 2% 25%;
+  }
+  // @media only screen and (min-width: 786px) {
+  //   padding: 2% 25%;
+  // }
+}
+// .nav {
+//   position: fixed;
+//   top: 0;
+//   left: 50%;
+//   width: calc(100% - 10rem);
+//   max-width: 1440px;
+//   padding: 1.75rem 1.5rem 1.25rem;
+//   border-bottom: 1px solid cc(border);
+//   background-color: cc(bg, .975);
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   transform: translate(-50%);
+//   z-index: 1;
+
+//   &__title {
+//     @extend %txt--banner;
+//     color: cc(txt, alt);
+//   }
+
+//   &__item {
+//     cursor: pointer;
+//     display: inline-block;
+//     position: relative;
+//     padding: .125rem .25rem;
+//     user-select: none;
+//     white-space: nowrap;
+//     z-index: 0;
+//     transition: all 250ms cb() 250ms;
+
+//     &+& {
+//       margin-left: .75rem;
+//     }
+
+//     &-enter,
+//     &-leave-to {
+//       opacity: 0;
+//       transition-delay: 0ms;
+//       transform: translate3d(2.5rem, 0, 0);
+//     }
+
+//     &-leave-active {
+//       position: absolute;
+//       bottom: 25%;
+//     }
+
+//     &--icon {
+//       display: block;
+//       position: absolute;
+//       top: 50%;
+//       right: 100%;
+//       transform: translate3d(-25%, -50%, 0);
+//     	font-size: 1.25rem;
+//     	width: 1em;
+//     	height: 1em;
+//     	box-shadow: inset 0 0 0 0 cc(primary);
+//     	border-radius: 100%;
+//     	overflow: hidden;
+//     	transition: box-shadow 175ms cb() 25ms;
+
+//     	&::before,
+//     	&::after {
+//     		content: '';
+//     		position: absolute;
+//     		top: 50%;
+//     		left: 50%;
+//     		width: 10%;
+//     		height: 70%;
+//     		background-color: cc(bg);
+//     		transition: transform 225ms cb();
+//     	}
+
+//     	&::before { transform: translate3d(-50%, -50%, 0) rotate(-45deg) scaleY(0) }
+//     	&::after { transform: translate3d(-50%, -50%, 0) rotate(45deg) scaleY(0) }
+//     }
+
+//     &:hover &--icon {
+//       box-shadow: inset 0 0 0 1.1em cc(primary);
+//   		&::before { transform: translate3d(-50%, -50%, 0) rotate(-45deg) scaleY(1) }
+//   		&::after { transform: translate3d(-50%, -50%, 0) rotate(45deg) scaleY(1) }
+//     }
+//   }
+// }

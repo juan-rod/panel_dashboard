@@ -1,0 +1,40 @@
+.v {
+  &--fade {
+    &-enter-active,
+    &-leave-active { transition: all 275ms cb(in) }
+
+    &-enter,
+    &-leave-to { opacity: 0 }
+
+    &-leave,
+    &-enter-to { opacity: 1 }
+  }
+
+  &--mask {
+    &-enter-active,
+    &-leave-active { transition: all 150ms cb() 500ms }
+
+    &-enter,
+    &-leave-to { opacity: 0 }
+
+    &-leave,
+    &-enter-to { opacity: 1 }
+  }
+  &--cards {
+    &-move {
+      -webkit-transition: all 600ms cb(bounce) 50ms;
+      transition: all 600ms cb(bounce) 50ms;
+    }
+    &-enter-active,
+    &-leave-active { transition: all 4ms cb(in) }
+
+    &-enter,
+    &-leave-to { opacity: 0 }
+    &-enter {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    &-leave,
+    &-enter-to { opacity: 1 }
+  }
+}

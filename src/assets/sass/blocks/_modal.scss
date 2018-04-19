@@ -1,0 +1,80 @@
+.modal__card{
+  & .cardTemp{
+    margin-bottom: 0;
+
+    .login__form--heading p{
+      max-width: 100%;
+    }
+    .cardTemp__footer{
+      font-size: .9em;
+    }
+  }
+}
+///ModalLogin.vue
+.modal__login--onboard{
+  padding: 3em 4em 6em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .onboard__title p{
+    @extend %txt--header;
+    text-align: center;
+  }
+  .onboard__progress{
+    height: auto;
+    width: 100%;
+    margin-bottom: 2rem;
+    .ms__progress{
+      height:3px;
+      background-color: cc(selection);
+      &--bar{
+        background-color: cc(secondary);
+        height:100%;
+        width:100%;
+      }
+    }
+  }
+  .onboard__body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin:0 1rem;
+    &--btns{
+      height: 150px;
+      width: 250px;
+      margin:0 1rem;
+    }
+    .ms__button--lg{
+      display: block;
+      height:100%;
+      width:100%;
+      background: cc(bg);
+      font-size: 1.5em;
+      &:hover{
+        background-color: cc(btn);
+        color: cc(bg);
+        transform: translateY(-1px);
+        box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px)  {
+  .modal__login--onboard{
+    padding: 3em 1.5em 4em;
+    .onboard__body{
+      flex-direction: column;
+      &--btns{
+        height: 100px;
+        width: 200px;
+        margin:.5rem 1rem;
+        .ms__button--lg{
+          padding: .5em 1em;
+        }
+      }
+    }
+  }
+}

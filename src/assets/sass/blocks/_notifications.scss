@@ -1,0 +1,30 @@
+.notify{
+  &.update{
+    background-color: cc(bg);
+  }
+  .vue-notification {
+    min-height: 70px;
+    .notification-title{
+      font-size: 1.1rem;
+    }
+    .notification-content{
+      font-size: .8rem;
+      padding-top:.3rem;
+      line-height:1.2;
+    }
+    &.success{
+      background-color: cc(success);
+      border-left-color: darken( cc(success), 10% );
+    }
+    &.warning{
+      background-color: cc(warning);
+      border-left-color: darken( cc(warning), 10% );
+    }
+    &.error{
+      background-color: cc(error);
+      border-left-color: darken( cc(error), 10% );
+    }
+  }
+  &__notification-title{}
+  &__notification-title{}
+}

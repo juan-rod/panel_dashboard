@@ -1,0 +1,215 @@
+#profile{
+	grid-column: 1/ 5;
+	@media only screen and (max-width: 768px){
+		.profile__form--section{
+			padding: 0 2rem;
+		}
+		.two__inputs--flex{
+   		flex-direction: column;
+		}
+	}
+	@media only screen and (min-width: 600px) {
+		grid-column: 2/ 5;
+		.profile__form--section{
+			padding: 0 2rem;
+		}
+
+	}
+}
+// .profile{
+	// @include insetBoxShadow;
+
+	// &__form{
+	// 	margin-top:2rem;
+
+	// 	&--section{
+	// 		padding: 0 4rem;
+
+	// 		input{
+	// 			color: cc(txt);
+	// 			font-size: 1.1rem;
+	// 		    padding: 10px 10px 10px 5px;
+	// 				display: block;
+	// 				width:100%;
+	// 		    min-width: 200px;
+	// 		    border: none;
+	// 		    border-bottom: 1px solid cc(border, .75);
+	// 		    // border-radius: 5px;
+
+	// 		    &:focus{
+	// 		    	outline:none;
+	// 		    }
+	// 		    &:focus ~ label, &:valid ~ label{
+	// 		    	top:-20px;
+	// 				font-size:14px;
+	// 				color:#5264AE;
+	// 		    }
+	// 			&:focus ~ .bar:before, &:focus ~ .bar:after {
+	// 				width:50%;
+	// 			}
+			   
+	// 		}
+	// 		label {
+	// 			color:#999; 
+	// 			font-size:18px;
+	// 			font-weight:normal;
+	// 			position:absolute;
+	// 			pointer-events:none;
+	// 			left:5px;
+	// 			top:10px;
+	// 			transition:0.2s ease all; 
+	// 			-moz-transition:0.2s ease all; 
+	// 			-webkit-transition:0.2s ease all;
+	// 		}
+		
+	// 		.bar{ 
+	// 			position:relative; 
+	// 			display:block; 
+	// 			width: 100%;
+  //   		min-width: 200px;
+
+	// 			&:before, &:after{
+	// 				content:'';
+	// 				height:2px; 
+	// 				width:0;
+	// 				bottom:1px; 
+	// 				position:absolute;
+	// 				background:#5264AE; 
+	// 				transition:0.2s ease all; 
+	// 				-moz-transition:0.2s ease all; 
+	// 				-webkit-transition:0.2s ease all;
+	// 			}
+	// 			&:before {
+	// 				left:50%;
+	// 			}
+	// 			&:after {
+	// 				right:50%; 
+	// 			}
+	// 		}
+
+			// .two__inputs--flex{
+			// 	@include flex;
+			//     -webkit-box-pack: justify;
+			// 		justify-content: space-between;
+			// 		flex-direction: row;
+			// }
+			// .group 			  { 
+			//   position:relative; 
+			// 	margin-bottom:45px;
+			// 	margin-right:2%;
+			// }
+			// .emailInput{
+			// 	width:100%;
+			// }
+			// .whereSize{
+			// 	font-size: .9rem;
+			// }
+			// .down-icon{
+			// 	position: absolute;
+			//     z-index: 2;
+			//     top: 14px;
+			//     right: 15px;
+			// }
+			// .down-icon i{
+			// 	font-size: 1.5em;
+			//     color: rgba(76, 78, 77, 0.55);
+			// }
+			// .dropDown {
+			// 	ul{
+			// 		background: cc(bg);
+			// 		@include popupBoxShadow;
+			// 		display: block;
+			// 		list-style: none;
+			// 		margin-top: 2px;
+			// 		overflow: scroll;
+			// 		padding: 0 1px;
+			// 		position: absolute;
+			// 		height: auto;
+			// 		max-height:200px;
+			// 		width: 100%;
+			// 		z-index: 2;
+
+			// 		li {
+			// 			position: relative;
+			// 			min-height: 32px;
+			// 		  	padding: 8px 4px;
+			// 		  	overflow: hidden;
+
+			// 		  	&:hover{
+			// 		  		@include hover;
+			// 		  	}
+			// 		}
+			// 	}	
+			// }
+			// .highlight {
+			//   position:absolute;
+			//   height:60%; 
+			//   width:100%; 
+			//   top:25%; 
+			//   left:0;
+			//   pointer-events:none;
+			//   opacity:0.5;
+			// }
+
+			// .highlightHand {
+			//   position:absolute;
+			//   height:60%; 
+			//   width:200px; 
+			//   top:25%; 
+			//   left:0;
+			//   pointer-events:none;
+			//   opacity:0.5;
+			// }
+			// /* active state */
+			// input:focus ~ .highlight {
+			//   -webkit-animation:inputHighlighter 0.3s ease;
+			//   -moz-animation:inputHighlighter 0.3s ease;
+			//   animation:inputHighlighter 0.3s ease;
+			// }
+			// input:focus ~ .highlightHand {
+			//   -webkit-animation:inputHighlighter 0.3s ease;
+			//   -moz-animation:inputHighlighter 0.3s ease;
+			//   animation:inputHighlighter 0.3s ease;
+			// }
+			// .dropDown-enter-active, .dropDown-leave-active {
+			//   transition: all 0.5s ease;
+			// }
+			// .dropDown-enter, .dropDown-leave-to {
+			//   height: 0;
+			 
+			// }
+			// /* ANIMATIONS ================ */
+			// @-webkit-keyframes inputHighlighter {
+			// 	from { background:#5264AE; }
+			//   to 	{ width:0; background:transparent; }
+			// }
+			// @-moz-keyframes inputHighlighter {
+			// 	from { background:#5264AE; }
+			//   to 	{ width:0; background:transparent; }
+			// }
+			// @keyframes inputHighlighter {
+			// 	from { background:#5264AE; }
+			//   to 	{ width:0; background:transparent; }
+			// }
+		// }
+	// }
+// }
+///ProfileCompleteCard.vue
+.home__completeProfile{
+	.ms__progress{
+		height:20px;
+    background-color: cc(selection);
+		margin-bottom: .6rem;
+      &--bar{
+        background-color: cc(secondary);
+        height:100%;
+				width:100%;
+      }
+	}
+	.ms__progress--bar{}
+	&--btn{
+		// width: 25%;
+		// float: right;
+	}
+
+}
